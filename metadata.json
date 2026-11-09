@@ -1,0 +1,8 @@
+{
+  "name": "FraudShield AI - Multi-Tenant E-Commerce & Intelligent Fraud Detection SaaS",
+  "description": "Multi-Tenant E-Commerce SaaS platform with integrated AI-powered fraud detection, XGBoost/Random Forest classification, Isolation Forest anomaly detection, and SHAP explainability.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

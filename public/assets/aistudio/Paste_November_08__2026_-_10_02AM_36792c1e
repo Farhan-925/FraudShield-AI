@@ -1,0 +1,1134 @@
+# FraudShield AI
+## AI-Powered Multi-Tenant E-Commerce SaaS Platform with Intelligent Fraud Detection
+
+**Project Type:** Final Year Project (FYP)
+
+**Project Name:** FraudShield AI
+
+**Project Category:** Artificial Intelligence, Machine Learning, E-Commerce, SaaS and Cybersecurity
+
+**Frontend:** Next.js, React, TypeScript, Tailwind CSS
+
+**Backend:** Python, FastAPI
+
+**Database:** PostgreSQL
+
+**Machine Learning:** XGBoost, Random Forest, Isolation Forest and SHAP
+
+**Architecture:** Multi-Tenant SaaS
+
+---
+
+# 1. Project Overview
+
+FraudShield AI is an intelligent, multi-tenant Software-as-a-Service (SaaS) platform that combines a fully functional e-commerce management system with an advanced AI-powered fraud detection engine.
+
+The platform allows multiple merchants to register, create and manage their own online stores, manage products, process orders, monitor customers and analyze business performance.
+
+The main innovation of the project is its integrated machine learning-based fraud detection system, which automatically analyzes incoming e-commerce transactions and identifies potentially fraudulent orders.
+
+The AI engine evaluates transaction characteristics, customer behavior, payment patterns, order frequency, device information and other relevant indicators to generate a fraud risk score.
+
+Merchants can monitor suspicious transactions through a dedicated fraud detection dashboard, understand why an order was flagged, investigate suspicious activities and make final decisions.
+
+The platform will initially demonstrate its e-commerce functionality through a premium home decor store while maintaining an architecture that supports different merchants and product categories.
+
+# 2. Problem Statement
+
+Online shopping platforms face several challenges related to fraudulent transactions, suspicious customer activities, payment abuse and financial losses.
+
+Traditional e-commerce platforms primarily focus on product management, order processing and customer experience. However, they may lack intelligent fraud monitoring capabilities that can identify suspicious transactions before orders are fulfilled.
+
+Manual fraud investigation is time-consuming and may result in legitimate orders being incorrectly rejected or fraudulent orders being approved.
+
+Furthermore, small and medium-sized online businesses may not have access to sophisticated fraud monitoring systems.
+
+FraudShield AI addresses these challenges by providing an integrated e-commerce and intelligent fraud detection platform that uses machine learning algorithms, anomaly detection and explainable AI to assist merchants in identifying and managing suspicious transactions.
+
+# 3. Project Objectives
+
+The main objectives are:
+
+1. Develop a professional, fully responsive e-commerce platform.
+2. Implement a multi-tenant SaaS architecture supporting multiple independent merchants.
+3. Provide complete product, inventory, customer and order management.
+4. Develop a secure authentication and role-based authorization system.
+5. Integrate machine learning models for automated fraud detection.
+6. Calculate risk scores for individual transactions.
+7. Detect suspicious transaction patterns using anomaly detection.
+8. Implement Explainable AI to explain why transactions are flagged.
+9. Develop a dedicated fraud investigation and analytics dashboard.
+10. Provide subscription management for merchants.
+11. Develop a platform-level super administrator dashboard.
+12. Deploy the application as a publicly accessible web platform.
+
+# 4. User Roles
+
+The system will support the following user roles.
+
+## 4.1 Platform Super Administrator
+
+Responsible for managing the entire SaaS platform.
+
+Permissions:
+- View all registered merchants.
+- Manage merchant accounts.
+- Activate or deactivate merchants.
+- Manage subscription plans.
+- Monitor platform usage.
+- View platform-wide analytics.
+- Monitor system health.
+- Manage platform settings.
+- View audit logs.
+
+## 4.2 Merchant Owner
+
+The owner of an individual e-commerce store.
+
+Permissions:
+- Manage store settings.
+- Manage products and categories.
+- Manage product variants and inventory.
+- Manage customers.
+- Manage orders.
+- Access fraud detection.
+- Review suspicious transactions.
+- Manage staff members.
+- View sales analytics.
+- Manage subscriptions.
+
+## 4.3 Merchant Administrator
+
+Responsible for day-to-day store operations.
+
+Permissions depend on assigned access levels.
+
+## 4.4 Fraud Analyst
+
+Responsible for investigating suspicious orders.
+
+Permissions:
+- View flagged orders.
+- Access fraud investigation details.
+- View risk scores.
+- View AI explanations.
+- Review transaction histories.
+- Mark orders as legitimate or fraudulent.
+- Add investigation notes.
+
+## 4.5 Order Manager
+
+Responsible for:
+- Viewing orders.
+- Updating fulfillment status.
+- Managing shipments.
+- Viewing customer information.
+- Processing permitted order actions.
+
+## 4.6 Product Manager
+
+Responsible for:
+- Adding products.
+- Updating product information.
+- Managing categories.
+- Managing product variants.
+- Managing inventory.
+
+## 4.7 Customer
+
+Responsible for:
+- Browsing products.
+- Registering and logging in.
+- Managing their profile.
+- Adding products to the cart.
+- Placing orders.
+- Viewing order history.
+- Tracking orders.
+- Submitting product reviews.
+
+# 5. Customer-Facing E-Commerce Website
+
+The platform must include a complete, responsive home decor e-commerce storefront.
+
+## 5.1 Homepage
+
+The homepage must include:
+
+- Professional navigation bar.
+- Brand logo.
+- Search functionality.
+- Hero banner with promotional content.
+- Featured collections.
+- Shop by category.
+- Best-selling products.
+- New arrivals.
+- Promotional banners.
+- Recommended products.
+- Customer testimonials.
+- Newsletter subscription.
+- Footer with useful links.
+- Responsive mobile navigation.
+
+## 5.2 Product Categories
+
+The initial home decor store will support:
+
+- Furniture.
+- Wall Decor.
+- Lighting.
+- Mirrors.
+- Rugs and Carpets.
+- Vases and Accessories.
+- Bedroom Decor.
+- Living Room Decor.
+
+Merchants must be able to create additional categories.
+
+## 5.3 Collection Pages
+
+Requirements:
+
+- Collection title and description.
+- Collection banner.
+- Product grid.
+- Product images.
+- Product title and price.
+- Discounted prices.
+- Product ratings.
+- Filtering by price.
+- Filtering by category.
+- Filtering by availability.
+- Sorting by price.
+- Sorting by newest.
+- Sorting by popularity.
+- Pagination or infinite scrolling.
+
+## 5.4 Product Details Page
+
+Each product must support:
+
+- Product title.
+- Product description.
+- Multiple product images.
+- Regular price.
+- Sale price.
+- SKU.
+- Category.
+- Product variants.
+- Size selection.
+- Color selection.
+- Material selection.
+- Variant-specific pricing.
+- Variant-specific stock.
+- Quantity selection.
+- Add to Cart.
+- Buy Now.
+- Wishlist.
+- Product reviews.
+- Related products.
+- Availability status.
+
+## 5.5 Shopping Cart
+
+Requirements:
+
+- Add products to cart.
+- Remove products.
+- Update quantities.
+- Change product variants.
+- Calculate subtotal.
+- Apply discount codes.
+- Calculate shipping.
+- Calculate final total.
+- Persist cart information.
+- Support guest and registered customers.
+
+## 5.6 Checkout
+
+The checkout process must include:
+
+- Customer name.
+- Email address.
+- Phone number.
+- Shipping address.
+- Billing address.
+- Payment method.
+- Shipping method.
+- Order notes.
+- Discount code.
+- Order summary.
+- Tax and shipping calculations where applicable.
+- Final order amount.
+- Place Order button.
+
+Supported payment methods:
+
+- Cash on Delivery.
+- Stripe test-mode payments.
+- Additional payment methods can be integrated later.
+
+Payment information must be handled securely through payment provider integrations. The system must never store raw card numbers or CVVs.
+
+## 5.7 Customer Account
+
+Requirements:
+
+- Customer registration.
+- Login and logout.
+- Profile management.
+- Password management.
+- Saved addresses.
+- Order history.
+- Order details.
+- Order tracking.
+- Wishlist.
+- Product reviews.
+
+# 6. Merchant Admin Dashboard
+
+The platform must provide a professional Shopify-inspired dashboard for managing individual stores.
+
+## 6.1 Dashboard Overview
+
+Display:
+
+- Total revenue.
+- Total orders.
+- Total customers.
+- Total products.
+- Pending orders.
+- Completed orders.
+- Cancelled orders.
+- Low-stock products.
+- Recent orders.
+- Sales charts.
+- Top-selling products.
+- Revenue statistics.
+
+Dashboard statistics must be calculated from actual database records.
+
+## 6.2 Product Management
+
+The merchant must be able to:
+
+- Create products.
+- Edit products.
+- Delete products.
+- Duplicate products.
+- Publish products.
+- Unpublish products.
+- Upload multiple images.
+- Manage product descriptions.
+- Assign categories.
+- Manage product variants.
+- Configure size-based pricing.
+- Configure color and material options.
+- Manage SKU.
+- Configure regular and sale prices.
+- Configure stock quantities.
+- Set product availability.
+
+## 6.3 Inventory Management
+
+Requirements:
+
+- View inventory.
+- Manage stock.
+- Track stock by variant.
+- Low-stock notifications.
+- Out-of-stock alerts.
+- Stock adjustments.
+- Inventory history.
+- Automatic stock reservation and release.
+- Prevent overselling through transactional inventory updates.
+
+## 6.4 Order Management
+
+The order management interface must be similar to Shopify.
+
+Order statuses:
+
+- Pending.
+- Confirmed.
+- Processing.
+- Shipped.
+- Delivered.
+- Cancelled.
+- Refunded.
+
+Features:
+
+- View all orders.
+- Search by order ID.
+- Search by customer.
+- Filter by date.
+- Filter by order status.
+- View customer information.
+- View ordered products.
+- View payment information.
+- View shipping information.
+- Update order status.
+- Add tracking numbers.
+- Print invoices.
+- Cancel orders.
+- Manage refunds where supported.
+- View fraud risk indicators.
+
+Order status and fraud status must be stored separately.
+
+## 6.5 Customer Management
+
+Features:
+
+- Customer list.
+- Customer profile.
+- Contact information.
+- Customer registration date.
+- Previous orders.
+- Total spending.
+- Number of purchases.
+- Customer activity.
+- Fraud review history where authorized.
+
+## 6.6 Sales Analytics
+
+Display:
+
+- Daily sales.
+- Weekly sales.
+- Monthly sales.
+- Total revenue.
+- Average order value.
+- Top-selling products.
+- Revenue by category.
+- Order status distribution.
+- Customer growth.
+
+# 7. AI-Powered Fraud Detection System
+
+This is the primary innovation and most important component of FraudShield AI.
+
+The system must use machine learning and transaction analysis to detect potentially fraudulent e-commerce orders.
+
+## 7.1 Fraud Detection Workflow
+
+1. Customer submits an order.
+2. Backend validates order and checkout information.
+3. Order is created with a pending status.
+4. System extracts transaction features.
+5. Fraud detection engine processes the features.
+6. Machine learning models generate predictions.
+7. Anomaly detection identifies unusual behavior.
+8. Risk scoring engine calculates a final risk score.
+9. System assigns a risk category.
+10. Prediction and explanations are saved.
+11. Merchant dashboard is updated.
+12. Suspicious orders are presented for investigation.
+
+## 7.2 Fraud Detection Factors
+
+The system should analyze:
+
+- Transaction amount.
+- Order frequency.
+- Customer account age.
+- Previous order history.
+- Number of orders within a short period.
+- Failed payment attempts.
+- IP address frequency.
+- Device usage frequency.
+- Billing and shipping address mismatch.
+- Unusual product quantities.
+- Customer transaction patterns.
+- Payment behavior.
+- Repeated use of suspicious identifiers.
+
+Only features actually available to the system should be used. Missing or unavailable information must not be fabricated.
+
+A single indicator, such as a new account or different shipping address, must not automatically establish fraud.
+
+## 7.3 Machine Learning Models
+
+Implement the following models:
+
+### Random Forest
+- Supervised fraud classification.
+- Baseline model comparison.
+- Feature importance analysis.
+
+### XGBoost
+- Primary supervised fraud classification model.
+- Predict fraud probability.
+- Handle complex transaction patterns.
+
+### Isolation Forest
+- Unsupervised anomaly detection.
+- Detect unusual transaction behavior.
+- Identify patterns that may not be represented in labeled training data.
+
+### Hybrid Risk Scoring
+
+Combine:
+- Supervised model predictions.
+- Anomaly detection scores.
+- Business rules.
+- Available transaction indicators.
+
+The final risk score must be normalized to a 0–100 scale.
+
+Model outputs must be calibrated and validated before combining them.
+
+## 7.4 Risk Categories
+
+Suggested thresholds:
+
+| Risk Score | Category | Suggested Action |
+|---|---|---|
+| 0–29 | Low | Approve |
+| 30–59 | Medium | Manual Review |
+| 60–79 | High | Hold |
+| 80–100 | Critical | Urgent Investigation |
+
+Risk thresholds must be configurable and tuned against validation data.
+
+The system must allow human review instead of automatically declaring an order fraudulent based solely on an ML prediction.
+
+## 7.5 Fraud Prediction Information
+
+Each prediction must store:
+
+- Order ID.
+- Tenant ID.
+- Prediction ID.
+- Risk score.
+- Fraud probability.
+- Risk category.
+- Model version.
+- Prediction timestamp.
+- Feature snapshot.
+- Detected risk factors.
+- Model explanation.
+- Final review status.
+
+The platform must retain prediction history instead of overwriting previous predictions.
+
+# 8. Advanced Fraud Detection Dashboard
+
+A dedicated fraud dashboard must be included.
+
+## 8.1 Fraud Analytics Overview
+
+Display:
+
+- Total transactions analyzed.
+- Legitimate transactions.
+- Flagged transactions.
+- Confirmed fraudulent transactions.
+- Average risk score.
+- Fraud rate.
+- False positive rate.
+- False negative rate.
+- Potential financial exposure.
+- Fraud trends over time.
+
+Metrics must distinguish model predictions from human-confirmed fraud labels.
+
+## 8.2 Fraud Transactions Table
+
+Columns:
+
+- Order ID.
+- Customer name.
+- Order amount.
+- Transaction date.
+- Risk score.
+- Risk level.
+- Fraud indicators.
+- Fraud status.
+- Review status.
+- Investigation action.
+
+Features:
+
+- Search.
+- Sorting.
+- Pagination.
+- Date filtering.
+- Risk-level filtering.
+- Fraud-status filtering.
+
+## 8.3 Order Investigation Page
+
+When an administrator opens a suspicious transaction, show:
+
+- Order information.
+- Customer profile.
+- Customer order history.
+- Transaction amount.
+- Payment attempts.
+- Shipping information.
+- Billing information.
+- IP information when available.
+- Device information when lawfully collected.
+- Previous suspicious activity.
+- Risk score breakdown.
+- AI explanation.
+- Detection timeline.
+- Investigation notes.
+- Review history.
+
+## 8.4 Fraud Investigation Actions
+
+Authorized administrators can:
+
+- Mark order as legitimate.
+- Confirm fraudulent activity.
+- Keep order under review.
+- Hold an order.
+- Release an order.
+- Add investigation notes.
+- View previous decisions.
+
+Every action must be recorded in the audit log.
+
+## 8.5 Fraud Alerts
+
+Generate alerts for:
+
+- Critical-risk transactions.
+- Multiple orders from suspicious IP addresses.
+- Repeated payment failures.
+- Unusual transaction frequency.
+- Suspicious device activity.
+- Repeated customer risk patterns.
+
+Provide in-app notifications and optional email alerts.
+
+# 9. Explainable Artificial Intelligence
+
+Implement SHAP-based explainability.
+
+The system should explain why an order received its risk score.
+
+Example:
+
+"Transaction flagged because of unusually high order value, multiple failed payment attempts and repeated suspicious activity from the same device."
+
+Requirements:
+
+- Feature importance.
+- Individual prediction explanations.
+- Risk factor visualization.
+- Positive and negative feature contributions.
+- Model version information.
+- Explanation history.
+
+The AI explanation must be generated from actual model and rule outputs, not invented text.
+
+# 10. Machine Learning Dataset and Evaluation
+
+Use public datasets and synthetic e-commerce transaction data.
+
+Suggested datasets:
+
+1. Credit Card Fraud Detection Dataset.
+2. IEEE-CIS Fraud Detection Dataset.
+3. Synthetic home decor e-commerce transactions.
+
+Dataset sources:
+
+- https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud
+- https://www.kaggle.com/competitions/ieee-fraud-detection
+
+The system must implement:
+
+- Data preprocessing.
+- Missing-value handling.
+- Feature engineering.
+- Class imbalance handling.
+- Train/validation/test splitting.
+- Model training.
+- Model comparison.
+- Model persistence.
+- Model versioning.
+
+Evaluation metrics:
+
+- Accuracy.
+- Precision.
+- Recall.
+- F1-score.
+- PR-AUC.
+- ROC-AUC.
+- Confusion matrix.
+- False positive rate.
+- False negative rate.
+
+Precision and recall must receive particular attention because fraud datasets are usually highly imbalanced.
+
+Model evaluation must use leakage-resistant splitting, preferably time-based when the dataset supports it.
+
+# 11. SaaS Multi-Tenant Architecture
+
+FraudShield AI must support multiple independent merchants.
+
+Each merchant must have isolated:
+
+- Products.
+- Categories.
+- Customers.
+- Orders.
+- Inventory.
+- Fraud predictions.
+- Fraud alerts.
+- Analytics.
+- Staff accounts.
+- Subscription information.
+
+Example:
+
+Merchant A: DecorHaus
+Merchant B: Modern Living
+Merchant C: HomeStyle
+
+Each merchant must only access its own data.
+
+Implement:
+
+- Tenant registration.
+- Tenant identification.
+- Tenant-aware queries.
+- Tenant-aware authorization.
+- Role-based permissions.
+- Tenant isolation testing.
+- Merchant onboarding.
+- Store configuration.
+- Staff invitations.
+
+A tenant ID received from the frontend must never be trusted without verifying the user's membership.
+
+# 12. Subscription Management
+
+Implement three example subscription plans.
+
+## Starter
+- Limited monthly order volume.
+- Basic store management.
+- Basic fraud detection.
+- Basic analytics.
+
+## Professional
+- Higher monthly order volume.
+- Advanced fraud detection.
+- AI explanations.
+- Advanced analytics.
+- Multiple staff accounts.
+
+## Enterprise
+- Higher configurable usage limits.
+- Advanced risk monitoring.
+- Team management.
+- Advanced reporting.
+- Priority support.
+
+Features:
+
+- Subscription registration.
+- Plan selection.
+- Subscription upgrades.
+- Subscription downgrades.
+- Subscription cancellation.
+- Billing history.
+- Usage tracking.
+- Subscription expiration.
+- Stripe test-mode integration.
+
+The system must enforce plan limits on the backend.
+
+# 13. Super Administrator Dashboard
+
+The platform owner must be able to:
+
+- View all merchants.
+- Manage merchant accounts.
+- View registered stores.
+- Activate and deactivate accounts.
+- Manage subscription plans.
+- View subscription records.
+- Monitor platform-wide revenue.
+- Monitor order volume.
+- Monitor fraud detection activity.
+- View platform analytics.
+- Monitor system health.
+- View audit logs.
+
+# 14. Notifications and Real-Time Functionality
+
+Implement:
+
+- New order notifications.
+- Suspicious transaction notifications.
+- Critical fraud alerts.
+- Low-stock notifications.
+- Order status notifications.
+- Subscription notifications.
+
+Use Redis and Celery for asynchronous jobs where appropriate.
+
+Use polling initially or WebSockets/SSE for real-time dashboard updates where beneficial.
+
+# 15. Database Requirements
+
+Use PostgreSQL as the primary relational database.
+
+Required tables:
+
+## Authentication and SaaS
+- users
+- tenants
+- tenant_members
+- stores
+- plans
+- subscriptions
+- refresh_sessions
+- invitations
+
+## Products and Inventory
+- categories
+- products
+- product_images
+- product_variants
+- inventory
+- inventory_movements
+- collections
+- collection_products
+
+## Customers and Shopping
+- customers
+- customer_addresses
+- carts
+- cart_items
+- wishlists
+- wishlist_items
+- coupons
+- product_reviews
+
+## Orders and Payments
+- orders
+- order_items
+- order_addresses
+- payments
+- payment_events
+- shipments
+- order_status_history
+- refunds
+
+## Fraud Detection
+- fraud_predictions
+- fraud_feature_snapshots
+- fraud_reasons
+- fraud_reviews
+- fraud_alerts
+- fraud_rules
+- model_versions
+- fraud_feedback
+
+## Analytics and System
+- daily_store_metrics
+- fraud_daily_metrics
+- audit_logs
+- subscription_invoices
+- usage_records
+- billing_events
+- notifications
+- webhook_endpoints
+- webhook_deliveries
+
+Use:
+- SQLAlchemy 2.0.
+- Alembic migrations.
+- Proper foreign keys.
+- Database indexes.
+- Unique constraints.
+- Tenant-scoped relationships.
+- Transactional operations.
+
+# 16. Technology Stack
+
+## Frontend
+- Next.js.
+- React.
+- TypeScript.
+- Tailwind CSS.
+- shadcn/ui.
+- Lucide React.
+- Recharts.
+- React Hook Form.
+- Zod.
+- TanStack Query.
+- Zustand.
+
+## Backend
+- Python.
+- FastAPI.
+- Pydantic.
+- SQLAlchemy.
+- Alembic.
+- PostgreSQL.
+- JWT authentication.
+- Redis.
+- Celery.
+
+## Machine Learning
+- Pandas.
+- NumPy.
+- Scikit-learn.
+- XGBoost.
+- Isolation Forest.
+- SHAP.
+- Joblib.
+
+## Deployment
+- Vercel for Next.js.
+- Docker for backend services.
+- Managed PostgreSQL.
+- Redis.
+- Cloudinary or S3-compatible storage.
+- Stripe for payment and subscriptions.
+
+# 17. API Requirements
+
+Organize backend APIs under `/api/v1`.
+
+Main modules:
+
+- `/auth`
+- `/tenants`
+- `/stores`
+- `/products`
+- `/categories`
+- `/collections`
+- `/cart`
+- `/checkout`
+- `/customers`
+- `/orders`
+- `/inventory`
+- `/payments`
+- `/fraud`
+- `/fraud/predictions`
+- `/fraud/reviews`
+- `/fraud/alerts`
+- `/analytics`
+- `/subscriptions`
+- `/notifications`
+- `/super-admin`
+
+Implement:
+- Authentication middleware.
+- Role-based authorization.
+- Tenant authorization.
+- Request validation.
+- API pagination.
+- Search and filters.
+- Consistent error responses.
+- Rate limiting.
+- API documentation.
+- Webhook verification.
+
+# 18. Non-Functional Requirements
+
+## Security
+- Password hashing.
+- Secure access and refresh tokens.
+- HTTPS in production.
+- Role-based access control.
+- Tenant isolation.
+- Input validation.
+- SQL injection protection.
+- Rate limiting.
+- Secure payment integration.
+- Audit logging.
+- Secret management.
+
+## Performance
+- Optimized database queries.
+- Pagination.
+- Image optimization.
+- Efficient API responses.
+- Background processing.
+- Appropriate caching.
+
+## Usability
+- Modern interface.
+- Responsive design.
+- Accessible components.
+- Consistent navigation.
+- Clear error messages.
+- Loading states.
+- Empty states.
+
+## Reliability
+- Database backups.
+- Transactional order processing.
+- Error handling.
+- Payment webhook idempotency.
+- Logging and monitoring.
+- Model version control.
+
+## Maintainability
+- Modular architecture.
+- Reusable components.
+- Typed frontend code.
+- Documented backend APIs.
+- Automated tests.
+- Version-controlled migrations.
+
+# 19. Suggested Frontend Routes
+
+## Marketing
+- /
+- /features
+- /pricing
+- /about
+- /contact
+
+## Authentication
+- /login
+- /register
+- /forgot-password
+- /reset-password
+
+## Storefront
+- /store/[slug]
+- /store/[slug]/collections
+- /store/[slug]/products/[productSlug]
+- /store/[slug]/cart
+- /store/[slug]/checkout
+- /store/[slug]/account
+- /store/[slug]/orders
+
+## Merchant Dashboard
+- /dashboard
+- /dashboard/products
+- /dashboard/products/create
+- /dashboard/products/[id]
+- /dashboard/categories
+- /dashboard/collections
+- /dashboard/inventory
+- /dashboard/orders
+- /dashboard/orders/[id]
+- /dashboard/customers
+- /dashboard/analytics
+- /dashboard/fraud
+- /dashboard/fraud/[id]
+- /dashboard/fraud/alerts
+- /dashboard/team
+- /dashboard/subscription
+- /dashboard/settings
+
+## Super Admin
+- /super-admin
+- /super-admin/merchants
+- /super-admin/subscriptions
+- /super-admin/plans
+- /super-admin/analytics
+- /super-admin/system
+
+# 20. Testing Requirements
+
+The application must include:
+
+## Frontend Testing
+- Responsive layout tests.
+- Form validation tests.
+- Cart functionality tests.
+- Checkout flow tests.
+- Dashboard navigation tests.
+
+## Backend Testing
+- Authentication tests.
+- Authorization tests.
+- Tenant isolation tests.
+- Product CRUD tests.
+- Order processing tests.
+- Payment webhook tests.
+- Inventory consistency tests.
+- Fraud API tests.
+
+## Machine Learning Testing
+- Model evaluation.
+- Prediction consistency.
+- Feature preprocessing tests.
+- Data leakage checks.
+- Model version compatibility.
+- False positive and false negative analysis.
+
+## End-to-End Testing
+- Merchant registration.
+- Store creation.
+- Product creation.
+- Customer purchase.
+- Order creation.
+- Fraud prediction.
+- Fraud investigation.
+- Subscription management.
+
+# 21. Deployment Requirements
+
+The final project must be deployable and accessible through a public domain.
+
+Requirements:
+- Production Next.js frontend.
+- Production FastAPI backend.
+- Managed PostgreSQL.
+- Environment-based configuration.
+- Secure database credentials.
+- HTTPS.
+- CORS configuration.
+- Payment test-mode support.
+- ML model artifact deployment.
+- Background worker deployment.
+- Database migrations.
+- Error logging.
+- Basic monitoring.
+- Database backup strategy.
+
+# 22. Expected Final Deliverables
+
+1. Complete responsive home decor e-commerce website.
+2. Merchant registration and authentication system.
+3. Multi-tenant SaaS architecture.
+4. Merchant management dashboard.
+5. Product and inventory management.
+6. Customer management.
+7. Shopping cart and checkout.
+8. Order management.
+9. AI fraud detection engine.
+10. Hybrid machine learning implementation.
+11. Fraud risk scoring system.
+12. Explainable AI integration.
+13. Fraud investigation dashboard.
+14. Fraud analytics and alerts.
+15. Super administrator dashboard.
+16. Subscription management.
+17. PostgreSQL database and migrations.
+18. Backend REST API.
+19. Automated tests.
+20. Deployment and documentation.
+
+# 23. Project Limitations
+
+- Fraud predictions are probabilistic and cannot guarantee detection of every fraudulent transaction.
+- Public datasets may not fully represent home decor e-commerce behavior.
+- Synthetic transactions will supplement public training data.
+- Payment integrations may initially use sandbox/test mode.
+- Some device and IP intelligence features depend on available, lawful data collection.
+- The platform will provide fraud risk assessment and decision support rather than claim to establish criminal intent.
+
+# 24. Expected Outcome
+
+FraudShield AI will provide a unified platform through which merchants can operate online stores and monitor suspicious transactions using machine learning.
+
+The project will demonstrate the practical application of full-stack development, SaaS architecture, relational database design, machine learning, anomaly detection, explainable AI and secure transaction processing.
+
+The final system will be a deployable web application suitable for an academic demonstration and further commercial development.
